@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import type { ReactElement } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hugo CAMPOS | Développeur FrontEnd",
@@ -17,8 +14,10 @@ export default function RootLayout({
 }>): ReactElement {
   return (
     <html lang="fr">
-      <body className={inter.className}>
-        {children}
+      <body className="min-h-screen bg-background scroll-smooth py-16 px-16">
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
