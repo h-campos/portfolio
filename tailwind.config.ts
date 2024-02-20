@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        spaceGrotesk: "Space Grotesk, Roboto, sans-serif"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
