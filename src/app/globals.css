@@ -2,17 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 24 10% 10%;
+    --card: 12 6% 15%;
+    --popover: 24 10% 10%;
+    --muted: 30 6% 25%;
+    --accent: 30 6% 25%;
+    --border: 30 6% 25%;
+    --input: 30 6% 25%;
+    --primary: 240 5.9% 10%;
+    --secondary: 240 4.8% 95.9%;
+    --radius: 0.5rem;
   }
 }
 
