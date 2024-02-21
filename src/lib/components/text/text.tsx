@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 import type { TextProps } from "./text.type";
 import { cn } from "@/lib/utils/clsx";
 
-export default function Text(props: TextProps): ReactElement | null {
+export function Text(props: TextProps): ReactElement | null {
   const { type = "p", color = "primary", size = "base", weight = "normal", align = "left", children, className, ...rest } = props;
 
   const style = cn(

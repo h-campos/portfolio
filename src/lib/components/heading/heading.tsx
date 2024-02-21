@@ -2,7 +2,7 @@ import type { HeadingProps } from "./heading.type";
 import type { ReactElement } from "react";
 import { cn } from "@/lib/utils/clsx";
 
-export default function Heading(props: HeadingProps): ReactElement | null {
+export function Heading(props: HeadingProps): ReactElement | null {
   const { type = "h3", color = "primary", size = "lg", children, className, ...rest } = props;
 
   const style = cn(
