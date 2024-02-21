@@ -17,7 +17,6 @@ const config: Config = {
         input: "hsl(var(--input))",
         background: "hsl(var(--background))",
         primary: "hsl(var(--primary))",
-        secondary: "hsl(var(--secondary))",
         muted: "hsl(var(--muted))",
         accent: "hsl(var(--accent))",
         popover: "hsl(var(--popover))",
