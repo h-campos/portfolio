@@ -11,6 +11,7 @@
   :root {
     --background: 24 10% 10%;
     --card: 12 6% 15%;
+    --foreground: 24 5% 64%
     --popover: 24 10% 10%;
     --muted: 30 6% 25%;
     --accent: 30 6% 25%;
@@ -19,16 +20,6 @@
     --primary: 240 4.8% 95.9%;
     --radius: 0.5rem;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {

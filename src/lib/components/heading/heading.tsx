@@ -9,7 +9,7 @@ export function Heading(props: HeadingProps): ReactElement | null {
     className,
     {
       "text-primay": color === "primary",
-      "text-gray": color === "gray",
+      "text-stone-400": color === "gray",
 
       "text-sm": size === "sm",
       "text-base": size === "base",

@@ -3,13 +3,13 @@ import type { TextProps } from "./text.type";
 import { cn } from "@/lib/utils/clsx";
 
 export function Text(props: TextProps): ReactElement | null {
-  const { type = "p", color = "primary", size = "base", weight = "normal", align = "left", children, className, ...rest } = props;
+  const { type = "p", color = "foreground", size = "base", weight = "normal", align = "left", children, className, ...rest } = props;
 
   const style = cn(
     className,
     {
       "text-primay": color === "primary",
-      "text-gray": color === "gray",
+      "text-stone-400": color === "gray",
 
       "text-sm": size === "sm",
       "text-base": size === "base",
