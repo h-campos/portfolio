@@ -2,8 +2,8 @@ import type { ReactElement } from "react";
 import type { TextProps } from "./text.type";
 import { cn } from "@/lib/utils/clsx";
 
-export function Text(props: TextProps): ReactElement | null {
-  const { type = "p", color = "foreground", size = "base", weight = "normal", align = "left", children, className, ...rest } = props;
+export function Text(props: TextProps): ReactElement {
+  const { color = "foreground", size = "base", weight = "normal", align = "left", children, className, ...rest } = props;
 
   const style = cn(
     className,
@@ -31,9 +31,5 @@ export function Text(props: TextProps): ReactElement | null {
     }
   );
 
-  if (type === "p") return <p className={style} {...rest}>{children}</p>;
-
-  if (type === "span") return <span className={style} {...rest}>{children}</span>;
-
-  return null;
+  return <p className={style} {...rest}>{children}</p>;
 }

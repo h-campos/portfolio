@@ -16,7 +16,7 @@ export default function AvailableLabel(props: AvailableLabelProps): ReactElement
       {...rest}
     >
       <div className={cn("w-1.5 h-1.5 rounded-full animate-pulse", available ? "bg-green-500" : "bg-red-500")} />
-      <Text type="p" size="sm" className={cn("uppercase text-opacity-80 tracking-wide", available ? "text-green-500" : "text-red-500")}>
+      <Text size="sm" className={cn("uppercase text-opacity-80 tracking-wide", available ? "text-green-500" : "text-red-500")}>
         {available ? "Disponible" : "Indisponible"}
       </Text>
     </div>
