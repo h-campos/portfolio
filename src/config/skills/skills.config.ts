@@ -11,6 +11,6 @@ export const skills: Skill[] = [
   { title: "Vitest", logo: "/skills/vitest.svg", link: "https://vitest.dev" },
   { title: "Storybook", logo: "/skills/storybook.png", link: "https://storybook.js.org" },
   { title: "TanStack Query", logo: "/skills/tanstack-query.png", link: "https://tanstack.com/query/v4" },
-  { title: "DayJS", logo: "/skills/dayjs-emoji.png", link: "https://day.js.org" },
+  { title: "DayJS", logo: "/skills/dayjs.png", link: "https://day.js.org" },
   { title: "ESLint", logo: "/skills/eslint.png", link: "https://eslint.org" }
 ];
