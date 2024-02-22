@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { Heading } from "@/lib/components/heading";
-import { Text } from "@/lib/components/text";
+import { Heading } from "@/lib/components/ui/heading";
+import { Text } from "@/lib/components/ui/text";
 import Image from "next/image";
 
 export default function AboutSection(): ReactElement {
