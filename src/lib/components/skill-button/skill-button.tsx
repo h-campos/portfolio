@@ -2,9 +2,9 @@ import type { ReactElement } from "react";
 import type { SkillButtonProps } from "./skill-button.type";
 import Link from "next/link";
 import { Text } from "@/lib/components/ui/text/text";
-import Icon from "@/lib/components/ui/icon/icon";
+import { Icon } from "@/lib/components/ui/icon/icon";
 
-export default function SkillButton(props: SkillButtonProps): ReactElement {
+export function SkillButton(props: SkillButtonProps): ReactElement {
   const { title, logo, link } = props;
 
   return (

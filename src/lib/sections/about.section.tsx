@@ -6,7 +6,7 @@ import { AvailableLabel } from "../components/available-label/available-label";
 
 export default function AboutSection(): ReactElement {
   return (
-    <div className="flex justify-between gap-16">
+    <section className="flex justify-between gap-16">
       <div className="space-y-5">
         <Heading type="h1" size="3xl" color="primary">CAMPOS Hugo</Heading>
 
@@ -25,6 +25,6 @@ export default function AboutSection(): ReactElement {
           className="rounded-full border-2"
         />
       </div>
-    </div>
+    </section>
   );
 }
