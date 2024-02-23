@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background scroll-smooth",
-          "py-12 sm:py-16 px-8 sm:px-20 md:px-32 lg:px-60 xl:px-80 2xl:bg-red-500",
+          "py-12 sm:py-16 px-8 sm:px-20 md:px-32 lg:px-60 xl:px-80 2xl:px-[30rem]",
           "text-primary",
           spaceGrotesk.className
         )}>
