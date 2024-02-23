@@ -1,13 +1,10 @@
-import type { Metadata, Viewport } from "next";
+import type { Viewport } from "next";
 import "./globals.css";
 import type { ReactElement } from "react";
 import { cn } from "@/lib/utils/clsx";
 import localFont from "next/font/local";
 
-export const metadata: Metadata = {
-  title: "Hugo CAMPOS | Développeur FrontEnd",
-  description: "Développeur FrontEnd depuis 4 ans, avec une aisance dans l'écosystème Javascript/Typescript"
-};
+export { metadata } from "@/config/metadata/metadata.config";
 
 export const viewport: Viewport = {
   themeColor: "#1c1917"

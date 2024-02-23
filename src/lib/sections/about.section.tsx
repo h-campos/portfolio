@@ -22,7 +22,8 @@ export default function AboutSection(): ReactElement {
           src="/pictures/me.webp"
           alt="My profile picture"
           fill
-          className="rounded-full border-2"
+          className="rounded-full border-2 object-cover"
+          sizes="100px"
         />
       </div>
     </section>
