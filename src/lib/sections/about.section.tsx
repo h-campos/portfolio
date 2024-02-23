@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 import { Heading } from "@/lib/components/ui/heading";
 import { Text } from "@/lib/components/ui/text";
 import Image from "next/image";
-import AvailableLabel from "../components/available-label/available-label";
+import { AvailableLabel } from "../components/available-label/available-label";
 
 export default function AboutSection(): ReactElement {
   return (

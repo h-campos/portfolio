@@ -3,7 +3,7 @@ import type { AvailableLabelProps } from "./available-label.type";
 import { cn } from "@/lib/utils/clsx";
 import { Text } from "@/lib/components/ui/text";
 
-export default function AvailableLabel(props: AvailableLabelProps): ReactElement {
+export function AvailableLabel(props: AvailableLabelProps): ReactElement {
   const { available, className, ...rest } = props;
 
   return (
