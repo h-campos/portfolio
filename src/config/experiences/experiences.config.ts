@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import type { ExperienceBase } from "./experiences.type";
 import { populateExperience } from "./experiences.util";
 import { date } from "@/lib/utils/date/parser";
@@ -6,8 +7,28 @@ const experienceBase: ExperienceBase[] = [
   {
     type: "open-source",
     date: {
+      start: date(10, 6, 2023),
+      end: null
+    },
+    company: "LCDS EVENEMENTS (ASSOCIATION)",
+    title: "Développeur full-stack",
+    link: "https://github.com/LCDS-EVENEMENTS",
+    description: [
+      "Développement d'une application web de gestion de bénévoles",
+      "Développement du site web de l'association",
+      "Mise en place de la billetterie du festival",
+      "Développement du système de planning pour les bénévoles via NextJS et Typescript",
+      "Travail en collaboration avec le web designer du site web",
+      "Mise en place de test end-to-end avec Playwright",
+      "Mise en place de test unitaire avec Vitest"
+    ],
+    skills: ["React", "Next", "TailwindCSS", "Typescript", "Zod", "ShadcnUI", "Supabase", "PostgreSQL", "DayJS", "Zustand", "TanStack Query", "Server Actions"]
+  },
+  {
+    type: "open-source",
+    date: {
       start: date(1, 8, 2023),
-      end: date(31, 11, 2024)
+      end: date(31, 11, 2023)
     },
     company: "LOL GAME",
     title: "Développeur full-stack",
