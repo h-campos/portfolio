@@ -14,19 +14,19 @@ export function Label(props: LabelProps): ReactElement {
       <Text
         size="sm"
         className={cn(
-          "rounded uppercase px-1",
+          "rounded uppercase px-1 py-0.5",
 
           {
             "flex gap-1 items-center hover:brightness-110": link,
 
-            "bg-blue text-white": color === "blue",
-            "bg-green text-white": color === "green"
+            "bg-blue-400 text-primary": color === "blue",
+            "bg-emerald-600 text-primary": color === "green"
           }
         )}
       >
         <span>{text}</span>
 
-        {link && <ExternalLinkIcon />}
+        {link && <ExternalLinkIcon className="text-primary w-4 h-4" />}
       </Text>
     </Tag>
   );

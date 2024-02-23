@@ -4,7 +4,7 @@ import { Experience } from "@/lib/components/experience";
 
 export default function ExperiencesSection(): ReactElement {
   return (
-    <section className="flex gap-7 flex-col">
+    <section className="flex gap-10 flex-col">
       {experiences.map((experience, index) => <Experience key={index} experience={experience} />)}
     </section>
   );

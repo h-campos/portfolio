@@ -11,7 +11,7 @@ export function Experience(props: ExperienceProps): ReactElement {
 
   return (
     <div {...rest}>
-      <div className="flex justify-between sm:flex-col">
+      <div className="flex justify-between flex-col sm:flex-row">
         <div className="flex flex-wrap items-center gap-2">
           <Text size="lg" className="uppercase">{experience.company}</Text>
 
