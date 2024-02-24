@@ -11,6 +11,8 @@ export const viewport: Viewport = {
   themeColor: "#1c1917"
 };
 
+//TODO: Do e2e test and unit test and storybook
+
 const spaceGrotesk = localFont({ src: "../../public/fonts/space-grotesk.ttf" });
 
 export default function RootLayout({
