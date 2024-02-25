@@ -5,12 +5,12 @@ import { date } from "@/lib/utils/date/parser";
 
 const experienceBase: ExperienceBase[] = [
   {
-    type: "open-source",
+    type: "pro",
     date: {
       start: date(10, 6, 2023),
       end: null
     },
-    company: "LCDS EVENEMENTS (ASSOCIATION)",
+    company: "LCDS EVENEMENTS",
     title: "Développeur full-stack",
     link: "https://github.com/LCDS-EVENEMENTS",
     description: [
