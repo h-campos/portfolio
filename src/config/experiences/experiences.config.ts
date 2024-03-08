@@ -7,6 +7,20 @@ const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
     date: {
+      start: date(16, 3, 2024),
+      end: null
+    },
+    company: "SHOTGUN!",
+    title: "Software Engineer",
+    link: "https://shotgun.live",
+    description: [
+      "..."
+    ],
+    skills: ["React", "Next", "TailwindCSS", "Typescript"]
+  },
+  {
+    type: "pro",
+    date: {
       start: date(10, 6, 2023),
       end: null
     },
