@@ -1,22 +1,25 @@
 /* eslint-disable max-len */
+import { date } from "@/lib/utils/date/parser";
 import type { ExperienceBase } from "./experiences.type";
 import { populateExperience } from "./experiences.util";
-import { date } from "@/lib/utils/date/parser";
 
-const experienceBase: ExperienceBase[] = [
+export const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
     date: {
-      start: date(16, 3, 2024),
+      start: date(15, 3, 2024),
       end: null
     },
     company: "SHOTGUN!",
     title: "Software Engineer",
     link: "https://shotgun.live",
     description: [
-      "..."
+      "Développement de nouvelles features sur les solutions existantes",
+      "Gestion et maintenance des projets existants",
+      "Travail en collaboration avec l'ensemble de l'équipe de développement",
+      "Résolution de bugs remontés par les équipes du support"
     ],
-    skills: ["React", "Next", "TailwindCSS", "Typescript"]
+    skills: ["React", "Next", "TailwindCSS", "Typescript", "GraphQL", "ApolloClient", "AntDesign", "Supabase", "Vercel"]
   },
   {
     type: "pro",
