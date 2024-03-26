@@ -1,7 +1,7 @@
-import type { ReactElement } from "react";
 import { Heading } from "@/lib/components/ui/heading";
 import { Text } from "@/lib/components/ui/text";
 import Image from "next/image";
+import type { ReactElement } from "react";
 import { AvailableLabel } from "../components/available-label/available-label";
 
 export default function AboutSection(): ReactElement {
@@ -14,7 +14,7 @@ export default function AboutSection(): ReactElement {
           Développeur FrontEnd depuis 4 ans, avec une aisance dans l&apos;écosystème Javascript/Typescript
         </Text>
 
-        <AvailableLabel available />
+        <AvailableLabel />
       </div>
 
       <div className="relative h-32 w-32 shrink-0 rounded-full hidden sm:block">
