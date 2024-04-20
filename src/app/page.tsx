@@ -5,8 +5,6 @@ import SkillsSection from "@/lib/sections/skills.section";
 import SocialsSection from "@/lib/sections/socials.section";
 import ExperiencesSection from "@/lib/sections/experiences.section";
 
-//TODO: Do some test
-
 export default function Home(): ReactElement {
   return (
     <>
