@@ -5,6 +5,8 @@ import SkillsSection from "@/lib/sections/skills.section";
 import SocialsSection from "@/lib/sections/socials.section";
 import ExperiencesSection from "@/lib/sections/experiences.section";
 
+//TODO: add github contributions graph
+
 export default function Home(): ReactElement {
   return (
     <>
