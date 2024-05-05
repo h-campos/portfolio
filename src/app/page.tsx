@@ -6,7 +6,7 @@ import GithubGraphSection from "@/lib/sections/githubgraph.section";
 import ExperiencesSection from "@/lib/sections/experiences.section";
 import SocialsSection from "@/lib/sections/socials.section";
 
-//TODO: add github contributions graph and repair it
+//TODO: add github contributions graph and repair it cause the current component do not work
 
 export default function Home(): ReactElement {
   return (
