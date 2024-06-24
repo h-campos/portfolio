@@ -7,6 +7,23 @@ export const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
     date: {
+      start: date(25, 6, 2024),
+      end: null
+    },
+    company: "SEEDEXT",
+    title: "Développeur Fullstack",
+    link: "https://seedext.com",
+    description: [
+      "Développement de nouvelles features pour la solution",
+      "Maintenance et résolution de bugs",
+      "Review de code sur Github",
+      "Travail en collaboration avec l'ensemble de l'équipe de développement"
+    ],
+    skills: ["React", "NextJS", "TailwindCSS", "Typescript", "ShadcnUI", "Fastify", "Playwright", "Vitest", "Storybook", "Github Actions"]
+  },
+  {
+    type: "pro",
+    date: {
       start: date(15, 3, 2024),
       end: null
     },
