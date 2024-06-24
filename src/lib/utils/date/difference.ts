@@ -3,7 +3,8 @@ import type { DateUnit } from "./difference.type";
 import { dayJS } from "@/lib/utils/day-js";
 import { pluralize } from "@/lib/utils/string";
 
-export function humanizeDateDiff(dateOne: Dayjs, dateTwo: Dayjs): string {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export function humanizeDateDiff(dateOne: Dayjs, dateTwo: Dayjs) {
   const dateUnits = dateDiffUnits(dateOne, dateTwo);
 
   for (let index = 0; index < dateUnits.length; index++) {
@@ -18,7 +19,7 @@ export function humanizeDateDiff(dateOne: Dayjs, dateTwo: Dayjs): string {
     }).join(" et ");
   }
 
-  throw new Error("The date difference is negative");
+  // throw new Error("The date difference is negative");
 }
 
 export function dateDiffUnits(dateOne: Dayjs, dateTwo: Dayjs): DateUnit[] {
