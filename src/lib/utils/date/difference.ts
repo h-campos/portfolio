@@ -3,8 +3,7 @@ import type { DateUnit } from "./difference.type";
 import { dayJS } from "@/lib/utils/day-js";
 import { pluralize } from "@/lib/utils/string";
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export function humanizeDateDiff(dateOne: Dayjs, dateTwo: Dayjs) {
+export function humanizeDateDiff(dateOne: Dayjs, dateTwo: Dayjs): string {
   const dateUnits = dateDiffUnits(dateOne, dateTwo);
 
   for (let index = 0; index < dateUnits.length; index++) {
