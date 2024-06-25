@@ -7,7 +7,7 @@ export const experienceBase: ExperienceBase[] = [
   {
     type: "pro",
     date: {
-      start: date(25, 6, 2024),
+      start: date(22, 6, 2024),
       end: null
     },
     company: "SEEDEXT",

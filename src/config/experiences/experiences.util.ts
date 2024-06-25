@@ -11,7 +11,7 @@ export function populateExperience(experienceBase: ExperienceBase[]): Experience
 
     return {
       ...exp,
-      duration: humanizeDateDiff(exp.date.start, exp.date.end ?? dayJS()),
+      duration: humanizeDateDiff(exp.date.start, exp.date.end ?? dayJS().add(1, "day")),
       dateFormat
     };
   });

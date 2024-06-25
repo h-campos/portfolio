@@ -18,7 +18,7 @@ export function humanizeDateDiff(dateOne: Dayjs, dateTwo: Dayjs): string {
     }).join(" et ");
   }
 
-  throw new Error("The date difference is negative");
+  return "";
 }
 
 export function dateDiffUnits(dateOne: Dayjs, dateTwo: Dayjs): DateUnit[] {
