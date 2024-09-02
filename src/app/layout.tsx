@@ -3,8 +3,6 @@ import "./globals.css";
 import type { ReactElement } from "react";
 import { cn } from "@/lib/utils/clsx";
 import localFont from "next/font/local";
-import { Analytics } from "@vercel/analytics/react";
-
 export { metadata } from "@/config/metadata/metadata.config";
 
 export const viewport: Viewport = {
@@ -29,7 +27,6 @@ export default function RootLayout({
         )}>
         <main className="">
           {children}
-          <Analytics />
         </main>
       </body>
     </html>
