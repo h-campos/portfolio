@@ -27,6 +27,7 @@ ENV NODE_ENV="production"
 ENV NEXT_TELEMETRY_DISABLED=1
   
 # Copy only necessary files from the build stage:
+COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
   
