@@ -2,7 +2,7 @@ import { skills } from "@/config/skills";
 import type { ReactElement } from "react";
 import { SkillButton } from "../components/skill-button/skill-button";
 
-export default function SkillsSection(): ReactElement {
+export const SkillsSection = (): ReactElement => {
   return (
     <section className="flex flex-wrap gap-2">
       {skills.map((skill, idx) => (

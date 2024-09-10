@@ -14,7 +14,7 @@ export function Label(props: LabelProps): ReactElement {
       <Text
         size="sm"
         className={cn(
-          "rounded uppercase px-1 py-0.5",
+          "rounded uppercase px-1",
 
           {
             "flex gap-1 items-center hover:brightness-110": link,

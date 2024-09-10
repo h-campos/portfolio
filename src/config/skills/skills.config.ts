@@ -12,5 +12,7 @@ export const skills: Skill[] = [
   { title: "Storybook", logo: "/skills/storybook.png", link: "https://storybook.js.org" },
   { title: "TanStack Query", logo: "/skills/tanstack-query.png", link: "https://tanstack.com/query/v4" },
   { title: "DayJS", logo: "/skills/dayjs.png", link: "https://day.js.org" },
-  { title: "ESLint", logo: "/skills/eslint.png", link: "https://eslint.org" }
+  { title: "ESLint", logo: "/skills/eslint.png", link: "https://eslint.org" },
+  { title: "Notion", logo: "/skills/notion.svg", link: "https://notion.so" },
+  { title: "PostgreSQL", logo: "/skills/postgresql.svg", link: "https://www.postgresql.org/" }
 ];
