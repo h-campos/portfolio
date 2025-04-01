@@ -8,6 +8,8 @@ import { SocialsSection } from "@/lib/sections/socials.section";
 export const revalidate = 3600;
 
 export default function Home(): ReactElement {
+  console.log("https://cuicuitedays.fr")
+
   return (
     <>
       <AboutSection />
