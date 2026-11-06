@@ -1,0 +1,8 @@
+allowBuilds:
+  esbuild: true
+  lightningcss: true
+minimumReleaseAgeExclude:
+  - lucide-react@1.69.0
+  - vite@8.3.6
+packages:
+  - .

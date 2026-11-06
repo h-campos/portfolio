@@ -1,35 +1,31 @@
-# BUILDER:
-FROM node:20-alpine AS builder
+# Portfolio: TanStack Start built by Vite + Nitro, served as a standalone Node server.
+# Railway builds this file and injects PORT; Nitro listens on HOST:PORT.
+
+# BUILDER
+FROM node:24-alpine AS builder
 WORKDIR /app
 
-# Enable PNPM:
+# pnpm comes from the packageManager field of package.json, through corepack.
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable
 
-# Set NEXTJS_STANDALONE_OUTPUT env:
-ENV NEXTJS_STANDALONE_OUTPUT=true  
-
-# Install dependencies:
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 RUN pnpm install --frozen-lockfile
-  
-# Build NextJS:
+
 COPY . .
-  
 RUN pnpm run build
-  
-# RUNNER:
-FROM node:20-alpine AS runner
+
+# RUNNER
+FROM node:24-alpine AS runner
 WORKDIR /app
-  
-# Define environment variables for execution:
-ENV HOSTNAME="0.0.0.0"
-ENV NODE_ENV="production" 
-ENV NEXT_TELEMETRY_DISABLED=1
-  
-# Copy only necessary files from the build stage:
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-  
-# Run the server:
-CMD ["node", "server.js"]
+
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+ENV PORT=3000
+
+# Nitro bundles the server and its dependencies into .output: no node_modules needed.
+COPY --from=builder --chown=node:node /app/.output ./.output
+
+USER node
+EXPOSE 3000
+CMD ["node", ".output/server/index.mjs"]

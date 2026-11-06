@@ -1,0 +1,12 @@
+node_modules
+.output
+.nitro
+.tanstack
+.vercel
+.vscode
+.github
+dist
+.git
+*.md
+Dockerfile
+.dockerignore
