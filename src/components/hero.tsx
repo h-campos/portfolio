@@ -10,14 +10,14 @@ export const Hero = ({ now }: { now: string }) => {
   return (
     <section
       id="top"
-      className="relative mx-auto mt-14 flex max-w-175 flex-col items-start gap-3.5 px-6 sm:flex-row animate-in fade-in fill-mode-both duration-[420ms] motion-safe:slide-in-from-bottom-2"
+      className="relative mx-auto mt-14 flex max-w-175 flex-col items-start gap-3.5 px-6 sm:flex-row animate-in fade-in fill-mode-both duration-300 ease-out motion-safe:slide-in-from-bottom-3 motion-safe:blur-in-4"
     >
       <img
         src={profile.avatar}
         alt={`Portrait de ${profile.name}`}
         width={52}
         height={52}
-        className="size-13 shrink-0 rounded-md object-cover"
+        className="size-13 shrink-0 rounded-md object-cover outline -outline-offset-1 outline-black/10 dark:outline-white/10"
       />
 
       <div className="dashed-card px-6 py-5.5">
@@ -66,7 +66,7 @@ export const Hero = ({ now }: { now: string }) => {
 /** Availability line under the hero, aligned with the hero card, so the contact stays high on the page. */
 export const Availability = () => {
   return (
-    <div className="mx-auto mt-6 flex max-w-175 flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 animate-in fade-in fill-mode-both duration-[420ms] delay-[100ms] motion-safe:slide-in-from-bottom-2 sm:pl-22.5">
+    <div className="mx-auto mt-6 flex max-w-175 flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 animate-in fade-in fill-mode-both duration-300 ease-out delay-[100ms] motion-safe:slide-in-from-bottom-3 motion-safe:blur-in-4 sm:pl-22.5">
       <div className="flex items-start gap-2.5">
         <span aria-hidden="true" className="relative top-1.5 size-2.25 shrink-0 rounded-full bg-success" />
 

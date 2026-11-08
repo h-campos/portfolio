@@ -19,6 +19,7 @@ export const AsciiField = () => {
     if (!canvas || !ctx) return;
 
     const started = performance.now();
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let raf = 0;
     let last = 0;
     let visible = false;
@@ -113,9 +114,12 @@ export const AsciiField = () => {
       draw(now - started);
     };
 
+    // Under reduced motion the field is drawn once, as a still frame, and never loops.
     const sync = (): void => {
       cancelAnimationFrame(raf);
-      if (visible && !document.hidden) raf = requestAnimationFrame(frame);
+      if (!visible || document.hidden) return;
+      if (reducedMotion.matches) draw(0);
+      else raf = requestAnimationFrame(frame);
     };
 
     const onPointerMove = (event: PointerEvent): void => {
@@ -131,6 +135,7 @@ export const AsciiField = () => {
 
     const onTheme = (): void => {
       atlas = null;
+      if (reducedMotion.matches) sync();
     };
 
     const resizer = new ResizeObserver(() => {
@@ -151,6 +156,7 @@ export const AsciiField = () => {
     window.addEventListener("pointermove", onPointerMove);
     document.documentElement.addEventListener("pointerleave", onPointerLeave);
     document.addEventListener("visibilitychange", sync);
+    reducedMotion.addEventListener("change", sync);
 
     return () => {
       cancelAnimationFrame(raf);
@@ -160,6 +166,7 @@ export const AsciiField = () => {
       window.removeEventListener("pointermove", onPointerMove);
       document.documentElement.removeEventListener("pointerleave", onPointerLeave);
       document.removeEventListener("visibilitychange", sync);
+      reducedMotion.removeEventListener("change", sync);
     };
   }, []);
 

@@ -12,8 +12,18 @@ const readTheme = (): Theme => {
 };
 
 const applyTheme = (theme: Theme): void => {
+  // Every color transition would otherwise fire at its own speed and smear the switch.
+  const freeze = document.createElement("style");
+  freeze.append(document.createTextNode("*,*::before,*::after{transition:none!important}"));
+  document.head.append(freeze);
+
   document.documentElement.classList.toggle("dark", theme === "dark");
   document.documentElement.style.colorScheme = theme;
+
+  document.body.getBoundingClientRect(); // forces the style flush while transitions are off
+  // A timer rather than requestAnimationFrame, which never fires in a background tab and would leave transitions off.
+  setTimeout(() => freeze.remove(), 1);
+
   try {
     localStorage.setItem(STORAGE_KEY, theme);
   }
@@ -46,14 +56,14 @@ export const ThemeToggle = () => {
       onClick={() => applyTheme(next)}
       aria-label={next === "dark" ? "Passer en thème sombre" : "Passer en thème clair"}
       title={next === "dark" ? "Thème sombre" : "Thème clair"}
-      className="inline-flex gap-0.5 rounded-lg border border-line2 p-[3px] outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
+      className="inline-flex gap-0.5 rounded-[8px] border border-line2 p-[3px] outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
     >
       <span className={cn(segment, theme === "light" && "bg-line2 text-foreground")}>
-        <SunIcon className="size-3.5" />
+        <SunIcon className="size-3.5" strokeWidth={1.5} nonScalingStroke />
       </span>
 
       <span className={cn(segment, theme === "dark" && "bg-line2 text-foreground")}>
-        <MoonIcon className="size-3.5" />
+        <MoonIcon className="size-3.5" strokeWidth={1.5} nonScalingStroke />
       </span>
     </button>
   );

@@ -38,7 +38,7 @@ const ExperienceItem = ({ experience, now }: { experience: Experience; now: stri
             aria-label={`Site de ${experience.company}`}
             className={cn("group/link float-right -m-1 p-1 text-muted-foreground transition-colors duration-150 ease-out hover:text-foreground", focusRing)}
           >
-            <ArrowRightIcon className="size-4 transition-transform duration-200 ease-out group-hover/link:translate-x-0.75 motion-reduce:transition-none" />
+            <ArrowRightIcon strokeWidth={1.5} nonScalingStroke className="size-4 transition-transform duration-200 ease-out group-hover/link:translate-x-0.75 motion-reduce:transition-none" />
           </a>
         )}
 
@@ -114,7 +114,7 @@ export const Timeline = ({ now }: { now: string }) => {
   return (
     <section
       id="experiences"
-      className="mx-auto max-w-180 scroll-mt-20 px-6 animate-in fade-in fill-mode-both duration-[420ms] delay-[300ms] motion-safe:slide-in-from-bottom-2"
+      className="mx-auto max-w-180 scroll-mt-20 px-6 animate-in fade-in fill-mode-both duration-300 ease-out delay-[300ms] motion-safe:slide-in-from-bottom-3 motion-safe:blur-in-4"
     >
       {/* The rail sits 10px left of the 700px column, so the heading shifts back into line with the other sections. */}
       <div className="px-2.5">

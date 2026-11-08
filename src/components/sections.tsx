@@ -15,14 +15,14 @@ export const Expertise = () => {
   return (
     <section
       id="savoir-faire"
-      className="scroll-mt-20 animate-in fade-in fill-mode-both duration-[420ms] delay-[200ms] motion-safe:slide-in-from-bottom-2"
+      className="scroll-mt-20 animate-in fade-in fill-mode-both duration-300 ease-out delay-[200ms] motion-safe:slide-in-from-bottom-3 motion-safe:blur-in-4"
     >
       <Heading>Ce que je sais faire</Heading>
 
       <ul className="grid gap-3 sm:grid-cols-2">
         {expertises.map(({ title, icon: Icon, description }) => (
           <li key={title} className="dashed-card p-4">
-            <Icon aria-hidden="true" className="size-5 text-(--accent-ink)" strokeWidth={1.75} />
+            <Icon aria-hidden="true" className="size-5 text-(--accent-ink)" strokeWidth={2.5} nonScalingStroke />
 
             <h3 className="mt-3 mb-1.5 text-[15px] font-bold text-foreground">{title}</h3>
 
