@@ -1,9 +1,8 @@
 import type { Experience } from "#/config/experiences";
 import type { CSSProperties } from "react";
+import { Heading } from "#/components/sections";
 import { Badge } from "#/components/ui/badge";
-import { Button } from "#/components/ui/button";
 import { experiences, kindLabel } from "#/config/experiences";
-import { profile } from "#/config/profile";
 import { formatDuration, formatPeriod, formatYears } from "#/lib/date";
 import { cn } from "#/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
@@ -115,32 +114,19 @@ export const Timeline = ({ now }: { now: string }) => {
   return (
     <section
       id="experiences"
-      className="relative mx-auto mt-9 max-w-180 scroll-mt-20 px-6 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2 motion-safe:delay-[120ms] motion-safe:duration-[420ms] motion-safe:fill-mode-both"
+      className="mx-auto max-w-180 scroll-mt-20 px-6 animate-in fade-in fill-mode-both duration-[420ms] delay-[300ms] motion-safe:slide-in-from-bottom-2"
     >
-      <div aria-hidden="true" className="absolute top-1 bottom-4 left-7 border-l border-dashed border-line" />
+      {/* The rail sits 10px left of the 700px column, so the heading shifts back into line with the other sections. */}
+      <div className="px-2.5">
+        <Heading>Expériences</Heading>
+      </div>
 
-      <div className="flex flex-col gap-3.5">
-        <div className="relative pl-7" style={brand("var(--success)")}>
-          <span className="rail-dot top-1.25" aria-hidden="true" />
+      <div className="relative">
+        <div aria-hidden="true" className="absolute top-1 bottom-4 left-1 border-l border-dashed border-line" />
 
-          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
-            <div>
-              <div className="mb-1 text-[12.5px] text-muted-foreground">Aujourd’hui</div>
-
-              <b className="mb-1 block text-base leading-[1.3] text-foreground">
-                {`En poste chez ${profile.currentCompany}, ouvert aux discussions`}
-              </b>
-
-              <p className="text-[13px] text-muted-foreground">Principalement en full remote.</p>
-            </div>
-
-            <Button asChild size="sm" className="rounded-md px-3.5 text-[13px] font-semibold">
-              <a href={`mailto:${profile.email}`}>Me contacter</a>
-            </Button>
-          </div>
+        <div className="flex flex-col gap-3.5">
+          {experiences.map((experience) => <ExperienceItem key={experience.id} experience={experience} now={now} />)}
         </div>
-
-        {experiences.map((experience) => <ExperienceItem key={experience.id} experience={experience} now={now} />)}
       </div>
     </section>
   );

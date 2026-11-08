@@ -1,3 +1,4 @@
+import { Button } from "#/components/ui/button";
 import { experiences } from "#/config/experiences";
 import { profile } from "#/config/profile";
 import { yearsSince } from "#/lib/date";
@@ -9,7 +10,7 @@ export const Hero = ({ now }: { now: string }) => {
   return (
     <section
       id="top"
-      className="relative mx-auto mt-14 flex max-w-175 items-start gap-3.5 px-6 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2 motion-safe:duration-[420ms]"
+      className="relative mx-auto mt-14 flex max-w-175 flex-col items-start gap-3.5 px-6 sm:flex-row animate-in fade-in fill-mode-both duration-[420ms] motion-safe:slide-in-from-bottom-2"
     >
       <img
         src={profile.avatar}
@@ -59,5 +60,28 @@ export const Hero = ({ now }: { now: string }) => {
         </p>
       </div>
     </section>
+  );
+};
+
+/** Availability line under the hero, aligned with the hero card, so the contact stays high on the page. */
+export const Availability = () => {
+  return (
+    <div className="mx-auto mt-6 flex max-w-175 flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 animate-in fade-in fill-mode-both duration-[420ms] delay-[100ms] motion-safe:slide-in-from-bottom-2 sm:pl-22.5">
+      <div className="flex items-start gap-2.5">
+        <span aria-hidden="true" className="relative top-1.5 size-2.25 shrink-0 rounded-full bg-success" />
+
+        <div>
+          <b className="block text-[15px] leading-[1.3] text-foreground">
+            {`En poste chez ${profile.currentCompany}, ouvert aux discussions`}
+          </b>
+
+          <p className="text-[13px] text-muted-foreground">Principalement en full remote.</p>
+        </div>
+      </div>
+
+      <Button asChild size="sm" className="rounded-md px-3.5 text-[13px] font-semibold">
+        <a href={`mailto:${profile.email}`}>Me contacter</a>
+      </Button>
+    </div>
   );
 };

@@ -11,13 +11,15 @@ export const SiteHeader = () => {
       </a>
 
       <div className="flex items-center gap-3.5 text-[13px]">
+        <a href="#savoir-faire" className="hidden font-medium text-foreground sm:inline">Savoir-faire</a>
+
         <a href="#experiences" className="hidden font-medium text-foreground sm:inline">Expériences</a>
 
         <a href="#stack" className="hidden font-medium text-foreground sm:inline">Stack</a>
 
         <ThemeToggle />
 
-        <Button asChild size="sm" className="rounded-md px-3.5 text-[13px] font-semibold">
+        <Button asChild variant="outline" size="sm" className="rounded-md border-line px-3.5 text-[13px] font-semibold">
           <a href={`mailto:${profile.email}`}>Me contacter</a>
         </Button>
       </div>

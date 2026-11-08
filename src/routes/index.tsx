@@ -1,7 +1,7 @@
 import { createFileRoute, getRouteApi } from "@tanstack/react-router";
 import { AsciiField } from "#/components/ascii-field";
-import { Hero } from "#/components/hero";
-import { SiteFooter, Stack } from "#/components/sections";
+import { Availability, Hero } from "#/components/hero";
+import { Expertise, SiteFooter, Stack } from "#/components/sections";
 import { SiteHeader } from "#/components/site-header";
 import { Timeline } from "#/components/timeline";
 
@@ -20,6 +20,12 @@ const Home = () => {
 
       <main>
         <Hero now={now} />
+
+        <Availability />
+
+        <div className="mx-auto max-w-175 px-6">
+          <Expertise />
+        </div>
 
         <Timeline now={now} />
 
