@@ -29,6 +29,11 @@ export const skills: Skill[] = [
     href: "https://www.radix-ui.com",
   },
   { title: "Base UI", logo: "/skills/baseui.png", href: "https://base-ui.com" },
+  {
+    title: "shadcn/ui",
+    logo: "/skills/shadcn.svg",
+    href: "https://ui.shadcn.com",
+  },
   { title: "Zod", logo: "/skills/zod.svg", href: "https://zod.dev" },
   {
     title: "Fastify",
