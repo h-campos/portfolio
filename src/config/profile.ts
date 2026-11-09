@@ -14,6 +14,8 @@ export const profile = {
   sinceYear: 2020,
   location: "Paris",
   email: "hcampospro@gmail.com",
+  /** Public booking page, the primary contact action across the site. */
+  bookingUrl: "https://cal.com/hcampos",
   currentCompany: "Seedext",
   avatar: "/pictures/me.webp",
   siteUrl: "https://hcampos.fr",

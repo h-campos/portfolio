@@ -70,6 +70,8 @@ export const SiteFooter = () => {
       ))}
 
       <a href={`mailto:${profile.email}`} className={footerLink}>Mail</a>
+
+      <a href={profile.bookingUrl} target="_blank" rel="noreferrer" className={footerLink}>Rendez-vous</a>
     </footer>
   );
 };

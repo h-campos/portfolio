@@ -20,7 +20,7 @@ export const SiteHeader = () => {
         <ThemeToggle />
 
         <Button asChild variant="outline" size="sm" className="rounded-md border-line px-3.5 text-[13px] font-semibold">
-          <a href={`mailto:${profile.email}`}>Me contacter</a>
+          <a href={profile.bookingUrl} target="_blank" rel="noreferrer">Prendre RDV</a>
         </Button>
       </div>
     </header>

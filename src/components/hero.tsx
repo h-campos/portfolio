@@ -79,9 +79,15 @@ export const Availability = () => {
         </div>
       </div>
 
-      <Button asChild size="sm" className="rounded-md px-3.5 text-[13px] font-semibold">
-        <a href={`mailto:${profile.email}`}>Me contacter</a>
-      </Button>
+      <div className="flex items-center gap-2">
+        <Button asChild variant="outline" size="sm" className="rounded-md border-line px-3.5 text-[13px] font-semibold">
+          <a href={`mailto:${profile.email}`}>M’écrire</a>
+        </Button>
+
+        <Button asChild size="sm" className="rounded-md px-3.5 text-[13px] font-semibold">
+          <a href={profile.bookingUrl} target="_blank" rel="noreferrer">Prendre rendez-vous</a>
+        </Button>
+      </div>
     </div>
   );
 };
